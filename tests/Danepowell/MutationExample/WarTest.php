@@ -28,8 +28,8 @@ final class WarTest extends TestCase
      * @return void
      */
     public function testGetCardValue(string $card, int $value): void {
-        War::getCardValue($card);
-        $this->assertSame(1,1);
+        $value = War::getCardValue($card);
+        $this->assertIsInt($value);
     }
 
     public static function provideTestGetCardValue(): array {
@@ -62,8 +62,7 @@ final class WarTest extends TestCase
      */
     public function testAnnounceWinner($card1, $card2, $expectedWinner): void {
         $war = new War($card1, $card2);
-        $war->announceWinner();
-        $this->assertSame(1,1);
+        $this->assertStringContainsString('!', $war->announceWinner());
     }
 
     public static function provideTestAnnounceWinner(): array {
