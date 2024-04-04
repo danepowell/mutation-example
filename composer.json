@@ -14,6 +14,11 @@
             "Danepowell\\MutationExample\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Danepowell\\MutationExample\\Tests\\": "tests/src"
+        }
+    },
     "authors": [
         {
             "name": "Dane Powell",
