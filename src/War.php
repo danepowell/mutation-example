@@ -43,4 +43,13 @@ class War
 
         return "It's a war!";
     }
+
+    public function repeatAnnounceWinner(): string
+    {
+        $winner = '';
+        for ($i = 0; $i < 3; $i++) {
+            $winner .= $this->announceWinner() . "\n";
+        }
+        return $winner;
+    }
 }
