@@ -81,8 +81,18 @@ final class WarTest extends TestCase
     /**
      * @covers \Danepowell\MutationExample\War::repeatAnnounceWinner
      */
-    public function testRepeatAnnounceWinner(): void {
+    public function testRepeatAnnounceWinner(): void
+    {
         $war = new War('3', '2');
         $this->assertSame("Player 1 wins!\nPlayer 1 wins!\nPlayer 1 wins!\n", $war->repeatAnnounceWinner());
+    }
+
+    /**
+     * @covers \Danepowell\MutationExample\War::repeatAnnounceWinnerWithSleep
+     */
+    public function testRepeatAnnounceWinnerWithSleep(): void
+    {
+        $war = new War('3', '2');
+        $this->assertSame("Player 1 wins!\nPlayer 1 wins!\nPlayer 1 wins!\n", $war->repeatAnnounceWinnerWithSleep());
     }
 }

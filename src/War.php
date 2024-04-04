@@ -52,4 +52,14 @@ class War
         }
         return $winner;
     }
+
+    public function repeatAnnounceWinnerWithSleep(): string
+    {
+        $winner = '';
+        for ($i = 0; $i < 3; $i++) {
+            sleep(1);
+            $winner .= $this->announceWinner() . "\n";
+        }
+        return $winner;
+    }
 }
