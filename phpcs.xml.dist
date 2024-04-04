@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- https://github.com/squizlabs/PHP_CodeSniffer/wiki/Annotated-Ruleset -->
+<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         name="MutationTesting"
+         xsi:noNamespaceSchemaLocation="vendor/squizlabs/php_codesniffer/phpcs.xsd"
+>
+
+  <description>Mutation Testing PHP CodeSniffer configuration.</description>
+
+  <arg name="extensions" value="php"/>
+
+  <arg name="colors"/>
+  <arg name="cache" value=".phpcs-cache"/>
+  <arg name="parallel" value="10"/>
+
+  <file>src</file>
+  <file>tests</file>
+
+  <rule ref="PSR12" />
+
+</ruleset>

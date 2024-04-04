@@ -6,15 +6,15 @@ use PHPUnit\Framework\TestCase;
 
 final class WarTest extends TestCase
 {
-
     /**
      * @covers \Danepowell\MutationExample\War::__construct
      *
      * @return void
      */
-    public function testClassConstructor(): void {
+    public function testClassConstructor(): void
+    {
         new War('2', 'A');
-        $this->assertSame(1,1);
+        $this->assertSame(1, 1);
     }
 
     /**
@@ -27,12 +27,14 @@ final class WarTest extends TestCase
      *
      * @return void
      */
-    public function testGetCardValue(string $card, int $value): void {
+    public function testGetCardValue(string $card, int $value): void
+    {
         $value = War::getCardValue($card);
         $this->assertIsInt($value);
     }
 
-    public static function provideTestGetCardValue(): array {
+    public static function provideTestGetCardValue(): array
+    {
         return [
             ['2', 2],
             ['3', 3],
@@ -60,12 +62,14 @@ final class WarTest extends TestCase
      * @covers \Danepowell\MutationExample\War::announceWinner
      * @return void
      */
-    public function testAnnounceWinner($card1, $card2, $expectedWinner): void {
+    public function testAnnounceWinner($card1, $card2, $expectedWinner): void
+    {
         $war = new War($card1, $card2);
         $this->assertStringContainsString('!', $war->announceWinner());
     }
 
-    public static function provideTestAnnounceWinner(): array {
+    public static function provideTestAnnounceWinner(): array
+    {
         return [
             ['3', '2', 'Player 1 wins!'],
             ['2', '3', 'Player 2 wins!'],

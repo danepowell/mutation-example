@@ -4,7 +4,6 @@ namespace Danepowell\MutationExample;
 
 class War
 {
-
     public string $card1;
     public string $card2;
 
@@ -17,11 +16,12 @@ class War
         $this->card2 = $card2;
     }
 
-    public static function getCardValue(string $card): int {
+    public static function getCardValue(string $card): int
+    {
         if (!in_array($card, ['J', 'Q', 'K', 'A'])) {
             return $card;
         }
-        return match($card) {
+        return match ($card) {
             'J' => 11,
             'Q' => 12,
             'K' => 13,
