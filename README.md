@@ -8,3 +8,6 @@ The `main` branch contains the working mutation testing example with 100% code
 coverage and 100% mutation score index (MSI).
 
 The `coverage-only` branch has 100% code coverage and 40% MSI, demonstrating the importance of mutation testing.
+
+The `errors` branch has code that will cause timeouts and syntax errors in
+mutation tests.
